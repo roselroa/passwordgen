@@ -26,8 +26,6 @@ def main():
 	cdb += string.ascii_letters
 	cdb += string.digits
 	cdb += special
-	out = []
-	out.append(random.choice(string.ascii_letters))
 
 	argv = sys.argv[1:]
 	try: 
@@ -42,8 +40,10 @@ def main():
 		else:
 			displayhelp()
 			exit(0)
-				
-	for i in range(length-1):
+
+	out = []
+
+	for i in range(length):
 		temp = random.choice(cdb)
 		out.append(temp)
 		
